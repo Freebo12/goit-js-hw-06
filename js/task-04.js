@@ -15,7 +15,7 @@ buttonjs.forEach(function (btn) {
         counterValue = +currentValue + +i;
       }
     } else {
-      counterValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
+      counterValue = currentValue - 1;
     }
     return (spanJs.textContent = counterValue);
   }
