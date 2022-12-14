@@ -8,24 +8,13 @@ const ingredients = [
 ];
 
 const arrayIngridients = document.querySelector("#ingredients");
+const ingListJs = [];
 
-for (let i = 0; i <= 5; i++) {
-  let listElem = document.createElement("li");
+for (let i = 0; i < ingredients.length; i++) {
+  const listElem = document.createElement("li");
 
   listElem.classList.add("item");
   listElem.textContent = ingredients[i];
-  const ingListJs = [];
   ingListJs.push(listElem);
-  arrayIngridients.appendChild(...ingListJs);
 }
-
-// const arrayIngridients = document.querySelector("#ingredients");
-
-// for (let i = 0; i <= 5; i++) {
-//   let listElem = document.createElement("li");
-
-//   listElem.classList.add("item");
-//   listElem.textContent = ingredients[i];
-//   arrayIngridients.appendChild(listElem);
-
-// }
+arrayIngridients.append(...ingListJs);
